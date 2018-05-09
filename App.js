@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {AppRegistry, StyleSheet, Text, View} from 'react-native';
 import {StackNavigator,} from 'react-navigation';
-import RedScreen from './components/RedScreen';
-import YellowScreen from './components/YellowScreen';
+import Login from './components/Login';
+import Register from './components/Register';
+import Welcome from './components/Welcome';
 
 export default class App extends Component {
   render() {
@@ -12,11 +13,12 @@ export default class App extends Component {
 
 const RootStack = StackNavigator(
   {
-    Red: {screen: RedScreen},
-    Yellow: {screen: YellowScreen},
+    login: {screen: Login},
+    register: {screen: Register},
+    welcome: {screen: Welcome}
   },
   {
-    initialRouteName: 'Yellow'
+    initialRouteName: 'login'
   }
 );
 
